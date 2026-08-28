@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --hw-bg-dark: #0A0A0B;
+  --hw-surface: #141416;
+  --hw-surface-elevated: #1B1B1F;
+  --hw-border: #2A2A2E;
+  --hw-border-subtle: #1F1F23;
+  --hw-accent: #38BDF8;
+  --hw-success: #22C55E;
+  --hw-warning: #F27D26;
+  --hw-text-primary: #F8FAFC;
+  --hw-text-muted: #94A3B8;
+  --hw-text-dim: #64748B;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overscroll-behavior-y: none;
+    -webkit-tap-highlight-color: transparent;
+    background-color: #0A0A0B;
+    color: #F8FAFC;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'Fira Code', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* Hardware / Specialist Tool Panel & Control Utilities */
+.hw-surface {
+  background-color: #141416;
+}
+
+.hw-surface-elevated {
+  background-color: #1B1B1F;
+}
+
+.hw-inset {
+  background-color: #0A0A0B;
+}
+
+.hw-border {
+  border-color: #2A2A2E;
+}
+
+.hw-border-subtle {
+  border-color: #1F1F23;
+}
+
+/* Custom scrollbars for mobile drawers */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0B;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2A2E;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #38BDF8;
+}
+
+/* Mobile Safe Area Inset Support */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+
